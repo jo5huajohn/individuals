@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: wildcard-lab42-me
+  namespace: monitoring
+spec:
+  secretName: wildcard-lab42-me-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  dnsNames:
+    - lab42.me
+    - '*.lab42.me'

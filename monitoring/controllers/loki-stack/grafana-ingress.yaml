@@ -21,4 +21,4 @@ spec:
 tls:
   - hosts:
     - grafana.lab42.me
-    secretName: grafana-tls
+    secretName: wildcard-lab42-me-tls
