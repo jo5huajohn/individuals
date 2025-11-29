@@ -5,7 +5,6 @@ metadata:
   namespace: monitoring
   annotations:
     kubernetes.io/ingress.class: traefik
-    cert-manager.io/cluster-issuer: letsencrypt
 spec:
   rules:
     - host: grafana.lab42.me
@@ -18,7 +17,7 @@ spec:
                 name: kube-prometheus-stack-grafana
                 port:
                   number: 80
-tls:
-  - hosts:
-    - grafana.lab42.me
-    secretName: wildcard-lab42-me-tls
+  tls:
+    - hosts:
+        - grafana.lab42.me
+      secretName: wildcard-lab42-me-tls

@@ -5,4 +5,5 @@ resources:
   - repository.yaml
   - release.yaml
   - promtail-release.yaml
+  - grafana-certificate.yaml
   - grafana-ingress.yaml
