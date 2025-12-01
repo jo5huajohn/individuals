@@ -30,7 +30,7 @@ spec:
     - kind: Secret
       name: authentik-credentials
       valuesKey: postgres-password
-      targetPath: authentik.postgresql.postgresql-password
+      targetPath: authentik.postgresql-password
 
   values:
     authentik:
