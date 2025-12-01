@@ -8,9 +8,11 @@ spec:
   chart:
     spec:
       chart: authentik
+      version: 2025.10.2
       sourceRef:
         kind: HelmRepository
         name: authentik
+        namespace: authentik
   interval: 12h
   install:
     strategy:
@@ -48,6 +50,16 @@ spec:
         enabled: true
         hosts:
           - authentik1.lab42.me
+      metrics:
+        prometheus:
+          serviceMonitor:
+            enabled: true
+
+    worker:
+      metrics:
+        prometheus:
+          serviceMonitor:
+            enabled: true
     
     postgresql:
       enabled: true
